@@ -1,0 +1,19 @@
+{
+  "name": "examples-protractor",
+  "version": "1.0.0",
+  "description": "Protractor Example",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tavotester/examples-protractor.git"
+  },
+  "author": "Fernando Távora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tavotester/examples-protractor/issues"
+  },
+  "homepage": "https://github.com/tavotester/examples-protractor#readme"
+}
