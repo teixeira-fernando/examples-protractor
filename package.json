@@ -1,0 +1,22 @@
+{
+  "name": "examples-protractor",
+  "version": "1.0.0",
+  "description": "Protractor Example",
+  "main": "index.js",
+  "scripts": {
+    "not-angular": "./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update && ./node_modules/protractor/bin/protractor not-angular.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tavotester/examples-protractor.git"
+  },
+  "author": "Fernando Távora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tavotester/examples-protractor/issues"
+  },
+  "homepage": "https://github.com/tavotester/examples-protractor#readme",
+  "dependencies": {
+    "protractor": "^5.1.2"
+  }
+}
