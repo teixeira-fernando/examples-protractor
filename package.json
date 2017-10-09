@@ -4,7 +4,7 @@
   "description": "Protractor Example",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "not-angular": "./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update && ./node_modules/protractor/bin/protractor not-angular.conf.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tavotester/examples-protractor/issues"
   },
-  "homepage": "https://github.com/tavotester/examples-protractor#readme"
+  "homepage": "https://github.com/tavotester/examples-protractor#readme",
+  "dependencies": {
+    "protractor": "^5.1.2"
+  }
 }
