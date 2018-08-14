@@ -9,3 +9,5 @@
 ### Steps
 1. Run `npm install`
 2. Run `npm run not-angular`
+
+Tutorial article: https://medium.com/@fertavora/protractor-not-angular-612dc78ce35f
