@@ -5,7 +5,7 @@ exports.config = {
   },
   resultJsonOutputFile: './reports/results.json',
   baseUrl: 'https://the-internet.herokuapp.com',
-  specs: ['./tests/login.tests.js'],
+  specs: ['./tests/*.tests.js'],
   onPrepare: () => {
     browser.ignoreSynchronization = true;
   }
