@@ -1,8 +1,9 @@
-const JSAlertsPage = require('../pages/javascriptAlerts.po');
+var jsAlertsPage = require('../pages/javascriptAlerts.po');
 
 describe('JSAlerts tests', function() {
 
     var alertDialog;
+    var JSAlertsPage = new jsAlertsPage();
     //beforeEach, beforeAll, afterEach, afterAll
 
     beforeAll(function () {
@@ -18,22 +19,40 @@ describe('JSAlerts tests', function() {
     alertDialog = browser.switchTo().alert();
     expect(alertDialog.getText()).toEqual("I am a JS Alert");
     alertDialog.accept();
-    console.log("Texto: "+JSAlertsPage.getResultLabelText());
-    expect(JSAlertsPage.getResultLabelText()).to.eventually.equal('You successfuly clicked an alert');
+    expect(JSAlertsPage.getResultLabelText()).toBe('You successfuly clicked an alert');
   });
 
-  it('JS Confirm Alert tests', function() {
+  it('JS Confirm Alert tests - OK', function() {
     JSAlertsPage.clickONJSConfirmButton();
     alertDialog = browser.switchTo().alert();
     expect(alertDialog.getText()).toEqual("I am a JS Confirm");
     alertDialog.accept();
+    expect(JSAlertsPage.getResultLabelText()).toBe('You clicked: Ok');
+  });
+
+  it('JS Confirm Alert tests - Dismiss', function() {
+    JSAlertsPage.clickONJSConfirmButton();
+    alertDialog = browser.switchTo().alert();
+    expect(alertDialog.getText()).toEqual("I am a JS Confirm");
+    alertDialog.dismiss();
+    expect(JSAlertsPage.getResultLabelText()).toBe('You clicked: Cancel');
   });
 
   it('JS Prompt Alert tests', function() {
     JSAlertsPage.clickONJSPromptButton();
     alertDialog = browser.switchTo().alert();
     expect(alertDialog.getText()).toEqual("I am a JS prompt");
+    alertDialog.sendKeys("Testing");
     alertDialog.accept();
+    expect(JSAlertsPage.getResultLabelText()).toBe('You entered: Testing');
+  });
+
+  it('JS Prompt Alert tests - Dismiss', function() {
+    JSAlertsPage.clickONJSPromptButton();
+    alertDialog = browser.switchTo().alert();
+    expect(alertDialog.getText()).toEqual("I am a JS prompt");
+    alertDialog.dismiss();
+    expect(JSAlertsPage.getResultLabelText()).toBe('You entered: null');
   });
 
 

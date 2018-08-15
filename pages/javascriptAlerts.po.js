@@ -29,9 +29,9 @@ var JavaScriptAlertsPage = function(){
     };
 
     this.getResultLabelText = function() {
-        return ResultLabel.getText();
+        return ResultLabel.getAttribute('innerText');
     };
   };
   
-  module.exports = new JavaScriptAlertsPage();
+  module.exports = JavaScriptAlertsPage;
   
